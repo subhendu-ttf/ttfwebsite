@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Tenth Floor — When the Playbook Stops Paying Back</title>
+  <meta name="description" content="The Tenth Floor is an investigative strategy consultancy. Two senior leaders, ten years of live engagements through structural disruption, evidence-based decisions instead of inherited playbooks.">
+  <meta property="og:title" content="The Tenth Floor — When the Playbook Stops Paying Back">
+  <meta property="og:description" content="Investigative strategy. Two senior leaders. A decade of live engagements through disruption.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+/* ============================================================
+   The Tenth Floor — Site Stylesheet
+   v1.0 — May 2026
+   Brand system locked from TTF_Design_Reference.html
+   ============================================================ */
+
+/* -- 1. Tokens ------------------------------------------------ */
+
+:root {
+  /* Primary spine */
+  --ttf-purple: #6D28B1;
+  --ttf-deep-purple: #3E116B;
+  --ttf-lavender: #E7DDF0;
+  --ttf-soft: #F4EFF8;
+
+  /* Surface and text */
+  --ttf-white: #FFFFFF;
+  --ttf-ink: #1D1724;
+  --ttf-quiet: #6D6475;
+  --ttf-line: #DED4E8;
+
+  /* Functional accents */
+  --ttf-red: #F04438;
+  --ttf-green: #2E7D32;
+  --ttf-blue: #3443E8;
+  --ttf-gold: #F7B731;
+
+  /* Type stack */
+  --display: "Barlow Condensed", "Helvetica Neue", Arial, sans-serif;
+  --ui: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --editorial: "Barlow", "Helvetica Neue", Arial, sans-serif;
+
+  /* Spacing scale (8px base) */
+  --s-1: 8px;
+  --s-2: 16px;
+  --s-3: 24px;
+  --s-4: 32px;
+  --s-5: 48px;
+  --s-6: 64px;
+  --s-7: 96px;
+  --s-8: 128px;
+
+  /* Layout */
+  --max-w: 1180px;
+  --gutter: 24px;
+
+  /* Shadows */
+  --shadow-card: 0 18px 45px rgba(45, 18, 72, 0.13);
+  --shadow-soft: 0 8px 24px rgba(45, 18, 72, 0.09);
+
+  /* Radii */
+  --r-lg: 22px;
+  --r-md: 14px;
+  --r-sm: 8px;
+}
+
+/* -- 2. Reset and base ---------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--ui);
+  font-size: 16px;
+  line-height: 1.58;
+  color: var(--ttf-ink);
+  background: var(--ttf-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--ttf-purple);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+a:hover {
+  color: var(--ttf-deep-purple);
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* -- 3. Typography -------------------------------------------- */
+
+.display-xl,
+.display-lg,
+.display-md,
+.display-sm,
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  color: var(--ttf-ink);
+}
+
+.display-xl {
+  font-size: clamp(48px, 7vw, 96px);
+  letter-spacing: -0.045em;
+  line-height: 0.96;
+}
+
+.display-lg {
+  font-size: clamp(40px, 5.5vw, 72px);
+  letter-spacing: -0.04em;
+}
+
+.display-md {
+  font-size: clamp(32px, 4vw, 52px);
+  letter-spacing: -0.035em;
+}
+
+.display-sm {
+  font-size: clamp(22px, 2.4vw, 32px);
+  letter-spacing: -0.03em;
+}
+
+.editorial {
+  font-family: var(--editorial);
+  font-size: 18px;
+  line-height: 1.62;
+  color: var(--ttf-ink);
+  letter-spacing: 0.008em;
+  font-weight: 400;
+}
+
+.editorial p + p {
+  margin-top: 1.1em;
+}
+
+.deck {
+  font-family: var(--ui);
+  font-size: 21px;
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--ttf-deep-purple);
+  letter-spacing: 0em;
+  max-width: 760px;
+}
+
+.eyebrow {
+  font-family: var(--ui);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ttf-quiet);
+}
+
+.meta {
+  font-family: var(--ui);
+  font-size: 13px;
+  color: var(--ttf-quiet);
+  letter-spacing: 0.02em;
+}
+
+/* -- 4. Layout primitives ------------------------------------- */
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.section {
+  padding-top: var(--s-7);
+  padding-bottom: var(--s-7);
+}
+
+.section--tight {
+  padding-top: var(--s-6);
+  padding-bottom: var(--s-6);
+}
+
+.section--lavender {
+  background: var(--ttf-lavender);
+}
+
+.section--soft {
+  background: var(--ttf-soft);
+}
+
+.section--purple {
+  background: var(--ttf-purple);
+  color: var(--ttf-white);
+}
+
+.section--purple .display-xl,
+.section--purple .display-lg,
+.section--purple .display-md,
+.section--purple h1,
+.section--purple h2,
+.section--purple h3 {
+  color: var(--ttf-white);
+}
+
+.section--purple .deck {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.section--ink {
+  background: var(--ttf-ink);
+  color: var(--ttf-white);
+}
+
+.section--ink .display-xl,
+.section--ink .display-lg,
+.section--ink .display-md,
+.section--ink .display-sm,
+.section--ink h1,
+.section--ink h2,
+.section--ink h3 {
+  color: var(--ttf-white);
+}
+
+@media (max-width: 700px) {
+  .section { padding-top: var(--s-5); padding-bottom: var(--s-5); }
+  .section--tight { padding-top: var(--s-4); padding-bottom: var(--s-4); }
+}
+
+/* -- 5. Top nav ----------------------------------------------- */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--ttf-line);
+}
+
+.nav__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 18px var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+.nav__logo { display: inline-flex; align-items: center; }
+.nav__logo img { height: 36px; width: auto; }
+
+.nav__links {
+  display: flex;
+  gap: var(--s-4);
+  margin-left: auto;
+  list-style: none;
+}
+
+.nav__links a {
+  color: var(--ttf-ink);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.005em;
+  position: relative;
+}
+
+.nav__links a:hover { color: var(--ttf-purple); }
+
+.nav__links a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--ttf-purple);
+}
+
+.nav__cta { margin-left: var(--s-3); }
+
+.nav__hamburger {
+  display: none;
+  background: transparent;
+  padding: 8px;
+  margin-left: auto;
+}
+
+.nav__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ttf-ink);
+  margin: 5px 0;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+@media (max-width: 900px) {
+  .nav__links {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--ttf-white);
+    border-bottom: 1px solid var(--ttf-line);
+    flex-direction: column;
+    padding: var(--s-3) var(--gutter);
+    gap: var(--s-3);
+  }
+  .nav__links.is-open { display: flex; }
+  .nav__hamburger { display: block; margin-left: auto; }
+  .nav__cta { display: none; }
+  .nav__hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav__hamburger.is-open span:nth-child(2) { opacity: 0; }
+  .nav__hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* -- 6. Buttons ----------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-family: var(--ui);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  border-radius: 999px;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--ttf-purple);
+  color: var(--ttf-white);
+  border-color: var(--ttf-purple);
+}
+
+.btn--primary:hover {
+  background: var(--ttf-deep-purple);
+  color: var(--ttf-white);
+  border-color: var(--ttf-deep-purple);
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ttf-purple);
+  border-color: var(--ttf-purple);
+}
+
+.btn--ghost:hover { background: var(--ttf-purple); color: var(--ttf-white); }
+
+.btn--white {
+  background: var(--ttf-white);
+  color: var(--ttf-purple);
+  border-color: var(--ttf-white);
+}
+
+.btn--white:hover { background: var(--ttf-soft); color: var(--ttf-deep-purple); }
+
+.btn--lg { padding: 16px 28px; font-size: 15px; }
+
+.btn .arrow { transition: transform 160ms ease; }
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* -- 7. Hero -------------------------------------------------- */
+
+.hero {
+  background: var(--ttf-purple);
+  color: var(--ttf-white);
+  padding-top: var(--s-7);
+  padding-bottom: var(--s-7);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  position: relative;
+}
+
+.hero h1 { color: var(--ttf-white); max-width: 14ch; }
+
+.hero__deck {
+  margin-top: var(--s-3);
+  font-family: var(--ui);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 64ch;
+  letter-spacing: -0.005em;
+}
+
+.hero__cta {
+  margin-top: var(--s-5);
+  display: flex;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+}
+
+.hero__mark {
+  position: absolute;
+  right: var(--gutter);
+  top: 50%;
+  transform: translateY(-50%);
+  height: 220px;
+  width: 220px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .hero__mark { display: none; }
+}
+
+/* -- 8. Stat blocks ------------------------------------------- */
+
+.stat { display: flex; flex-direction: column; gap: 6px; }
+
+.stat__value {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(56px, 9vw, 116px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  color: var(--ttf-purple);
+}
+
+.section--purple .stat__value,
+.section--ink .stat__value { color: var(--ttf-white); }
+
+.stat__label {
+  font-family: var(--ui);
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ttf-quiet);
+  max-width: 36ch;
+  line-height: 1.4;
+}
+
+.section--purple .stat__label,
+.section--ink .stat__label { color: rgba(255, 255, 255, 0.78); }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-5);
+  margin-top: var(--s-5);
+}
+
+@media (max-width: 700px) {
+  .stat-grid { grid-template-columns: 1fr; gap: var(--s-4); }
+}
+
+/* -- 9. Editorial blocks -------------------------------------- */
+
+.lede { max-width: 720px; }
+
+.eyebrow + .display-lg,
+.eyebrow + .display-md,
+.eyebrow + h2 { margin-top: var(--s-2); }
+
+.display-xl + .deck,
+.display-lg + .deck,
+.display-md + .deck,
+h1 + .deck,
+h2 + .deck { margin-top: var(--s-3); }
+
+.deck + .editorial,
+.display-xl + .editorial,
+.display-lg + .editorial,
+.display-md + .editorial,
+h1 + .editorial,
+h2 + .editorial { margin-top: var(--s-4); }
+
+.editorial--two-col { column-count: 2; column-gap: var(--s-5); }
+
+@media (max-width: 900px) {
+  .editorial--two-col { column-count: 1; }
+}
+
+/* -- 10. Featured beat (provenance) --------------------------- */
+
+.beat {
+  background: var(--ttf-soft);
+  padding-top: var(--s-7);
+  padding-bottom: var(--s-7);
+}
+
+.beat__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--s-6);
+  align-items: start;
+}
+
+.beat__head .display-lg { max-width: 16ch; }
+
+.beat__head .deck {
+  margin-top: var(--s-3);
+  font-family: var(--editorial);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--ttf-ink);
+  max-width: 38ch;
+}
+
+.beat__body .editorial { font-size: 18px; }
+
+.beat__stat {
+  margin-top: var(--s-5);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--ttf-line);
+}
+
+@media (max-width: 900px) {
+  .beat__inner { grid-template-columns: 1fr; gap: var(--s-4); }
+}
+
+/* -- 11. Method cards (5 principles) -------------------------- */
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+}
+
+.principle {
+  background: var(--ttf-white);
+  border: 1px solid var(--ttf-line);
+  border-radius: var(--r-md);
+  padding: var(--s-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.principle:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--ttf-purple);
+}
+
+.principle__num {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: -0.04em;
+  color: var(--ttf-purple);
+  line-height: 1;
+}
+
+.principle__title {
+  font-family: var(--ui);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  color: var(--ttf-ink);
+}
+
+.principle__body {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ttf-quiet);
+}
+
+/* -- 12. Case cards ------------------------------------------- */
+
+.cases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+}
+
+@media (max-width: 900px) { .cases { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .cases { grid-template-columns: 1fr; } }
+
+.case-card {
+  background: var(--ttf-white);
+  border: 1px solid var(--ttf-line);
+  border-radius: var(--r-md);
+  padding: var(--s-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.case-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.case-card__logo {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--s-2);
+}
+
+.case-card__logo img { max-height: 40px; width: auto; }
+.case-card__logo--asbl img { mix-blend-mode: multiply; }
+
+.case-card__meta {
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ttf-quiet);
+}
+
+.case-card__title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--ttf-ink);
+  line-height: 1.1;
+}
+
+.case-card__outcome {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ttf-quiet);
+  margin-top: auto;
+}
+
+.case-card__outcome strong { color: var(--ttf-purple); font-weight: 700; }
+
+/* Case-full layout for /work page */
+.case-full {
+  border-top: 1px solid var(--ttf-line);
+  padding-top: var(--s-5);
+  padding-bottom: var(--s-5);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--s-5);
+}
+
+.case-full__sidebar .case-card__logo { height: 56px; margin-bottom: var(--s-2); }
+.case-full__sidebar .case-card__logo img { max-height: 56px; }
+
+.case-full__body p {
+  margin-top: 1em;
+  font-family: var(--editorial);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.case-full__body p:first-child { margin-top: 0; }
+
+.case-full__pattern {
+  margin-top: var(--s-3);
+  padding: var(--s-3);
+  background: var(--ttf-soft);
+  border-left: 3px solid var(--ttf-purple);
+  border-radius: var(--r-sm);
+  font-family: var(--editorial);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ttf-deep-purple);
+}
+
+@media (max-width: 800px) {
+  .case-full { grid-template-columns: 1fr; gap: var(--s-3); }
+}
+
+/* Filters bar */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1);
+  margin-top: var(--s-4);
+  margin-bottom: var(--s-5);
+}
+
+.filter-chip {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--ttf-white);
+  border: 1px solid var(--ttf-line);
+  font-family: var(--ui);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ttf-quiet);
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+.filter-chip:hover { border-color: var(--ttf-purple); color: var(--ttf-purple); }
+
+.filter-chip.is-active {
+  background: var(--ttf-purple);
+  color: var(--ttf-white);
+  border-color: var(--ttf-purple);
+}
+
+.filter-group { margin-top: var(--s-3); }
+
+.filter-group__label {
+  font-family: var(--ui);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ttf-quiet);
+  margin-bottom: var(--s-1);
+}
+
+/* -- 13. Client strip ----------------------------------------- */
+
+.strip {
+  background: var(--ttf-lavender);
+  padding: var(--s-5) 0;
+}
+
+.strip__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.strip__label { text-align: center; margin-bottom: var(--s-4); }
+
+.strip__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--s-4);
+  align-items: center;
+  justify-items: center;
+}
+
+.strip__grid img {
+  max-height: 38px;
+  max-width: 130px;
+  width: auto;
+  object-fit: contain;
+}
+
+.strip__grid img.is-asbl { mix-blend-mode: multiply; }
+
+@media (max-width: 900px) {
+  .strip__grid { grid-template-columns: repeat(3, 1fr); gap: var(--s-3); }
+}
+
+@media (max-width: 500px) {
+  .strip__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* -- 14. Persona teasers -------------------------------------- */
+
+.personas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s-2);
+  margin-top: var(--s-5);
+}
+
+.persona {
+  background: var(--ttf-white);
+  border: 1px solid var(--ttf-line);
+  border-radius: var(--r-md);
+  padding: var(--s-3);
+}
+
+.persona__num {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--ttf-purple);
+}
+
+.persona__name {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--ttf-ink);
+  margin-top: 6px;
+  line-height: 1.05;
+}
+
+.persona__body {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ttf-quiet);
+  margin-top: var(--s-2);
+}
+
+.persona-full {
+  border-top: 1px solid var(--ttf-line);
+  padding: var(--s-5) 0;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--s-5);
+}
+
+.persona-full__name {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--ttf-purple);
+  line-height: 1.05;
+}
+
+.persona-full__num {
+  font-family: var(--ui);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--ttf-quiet);
+  margin-bottom: var(--s-1);
+}
+
+.persona-full__body p {
+  font-family: var(--editorial);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.persona-full__body p + p { margin-top: 1em; }
+
+@media (max-width: 800px) {
+  .persona-full { grid-template-columns: 1fr; gap: var(--s-3); }
+}
+
+/* -- 15. Leader cards (team) ---------------------------------- */
+
+.leaders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-5);
+  margin-top: var(--s-5);
+}
+
+.leader-card {
+  background: var(--ttf-soft);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.leader-card__name {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(28px, 3.4vw, 40px);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: var(--ttf-purple);
+  line-height: 1.05;
+}
+
+.leader-card__role {
+  font-family: var(--ui);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ttf-quiet);
+  margin-top: -4px;
+}
+
+.leader-card__bio {
+  font-family: var(--editorial);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ttf-ink);
+}
+
+.leader-card__bio + .leader-card__bio { margin-top: var(--s-2); }
+
+.leader-card__credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--s-2);
+}
+
+.credential {
+  padding: 4px 10px;
+  background: var(--ttf-white);
+  border: 1px solid var(--ttf-line);
+  border-radius: 999px;
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ttf-deep-purple);
+  letter-spacing: 0.01em;
+}
+
+.leader-card__contact {
+  margin-top: var(--s-3);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--ttf-line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--ui);
+  font-size: 14px;
+}
+
+.leader-card__contact a { color: var(--ttf-purple); font-weight: 500; }
+
+@media (max-width: 800px) {
+  .leaders { grid-template-columns: 1fr; }
+}
+
+/* -- 16. Three entry options ---------------------------------- */
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+}
+
+.option {
+  background: var(--ttf-white);
+  border: 1px solid var(--ttf-line);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.option--featured {
+  background: var(--ttf-purple);
+  color: var(--ttf-white);
+  border-color: var(--ttf-purple);
+}
+
+.option--featured .option__title,
+.option--featured .option__body { color: var(--ttf-white); }
+
+.option--featured .option__label { color: rgba(255, 255, 255, 0.75); }
+
+.option__label {
+  font-family: var(--ui);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ttf-quiet);
+}
+
+.option__title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--ttf-ink);
+  line-height: 1.05;
+}
+
+.option__body {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ttf-quiet);
+  flex: 1;
+}
+
+.option__cta { margin-top: var(--s-2); }
+
+@media (max-width: 900px) {
+  .options { grid-template-columns: 1fr; }
+}
+
+/* -- 17. Contact block ---------------------------------------- */
+
+.contact-block {
+  background: var(--ttf-ink);
+  color: var(--ttf-white);
+  padding: var(--s-7) 0;
+}
+
+.contact-block__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.contact-block .display-lg { color: var(--ttf-white); }
+
+.contact-block__deck {
+  margin-top: var(--s-2);
+  font-family: var(--editorial);
+  font-style: italic;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 56ch;
+}
+
+.contact-grid {
+  margin-top: var(--s-5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-5);
+}
+
+.contact-card__name {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--ttf-white);
+}
+
+.contact-card__role {
+  font-family: var(--ui);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+.contact-card__lines {
+  margin-top: var(--s-2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--ui);
+  font-size: 15px;
+}
+
+.contact-card__lines a {
+  color: var(--ttf-white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-card__lines a:hover {
+  color: var(--ttf-lavender);
+  text-decoration-color: var(--ttf-lavender);
+}
+
+.contact-block__address {
+  margin-top: var(--s-5);
+  padding-top: var(--s-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: var(--ui);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.01em;
+}
+
+.contact-block__sign-off {
+  margin-top: var(--s-3);
+  font-family: var(--editorial);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+@media (max-width: 700px) {
+  .contact-grid { grid-template-columns: 1fr; gap: var(--s-4); }
+}
+
+/* -- 18. Footer ----------------------------------------------- */
+
+.footer {
+  background: var(--ttf-soft);
+  padding: var(--s-6) 0 var(--s-4);
+}
+
+.footer__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.footer__pvm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-4);
+  margin-bottom: var(--s-5);
+}
+
+.footer__block-label {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ttf-purple);
+  margin-bottom: var(--s-1);
+}
+
+.footer__block-body {
+  font-family: var(--editorial);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ttf-ink);
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--ttf-line);
+  padding-top: var(--s-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  font-family: var(--ui);
+  font-size: 13px;
+  color: var(--ttf-quiet);
+}
+
+.footer__sign-off {
+  font-family: var(--editorial);
+  font-style: italic;
+  color: var(--ttf-deep-purple);
+}
+
+@media (max-width: 800px) {
+  .footer__pvm { grid-template-columns: 1fr; gap: var(--s-3); }
+}
+
+/* -- 19. Section bridge --------------------------------------- */
+
+.bridge {
+  text-align: center;
+  padding: var(--s-5) var(--gutter);
+  font-family: var(--editorial);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--ttf-deep-purple);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.bridge--strong {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(24px, 3vw, 36px);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-style: normal;
+  color: var(--ttf-purple);
+}
+
+/* -- 20. Testimonials ----------------------------------------- */
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+}
+
+.testimonial {
+  background: var(--ttf-white);
+  border: 1px solid var(--ttf-line);
+  border-radius: var(--r-md);
+  padding: var(--s-4);
+}
+
+.testimonial__quote {
+  font-family: var(--editorial);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ttf-ink);
+}
+
+.testimonial__attr {
+  margin-top: var(--s-2);
+  font-family: var(--ui);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ttf-purple);
+}
+
+.testimonial__role {
+  font-family: var(--ui);
+  font-size: 12px;
+  color: var(--ttf-quiet);
+  margin-top: 2px;
+}
+
+@media (max-width: 800px) {
+  .testimonials { grid-template-columns: 1fr; }
+}
+
+/* -- 21. Method page ------------------------------------------ */
+
+.method-block {
+  border-top: 1px solid var(--ttf-line);
+  padding-top: var(--s-5);
+  margin-top: var(--s-5);
+}
+
+.method-block__title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--ttf-purple);
+}
+
+.method-block__body {
+  margin-top: var(--s-3);
+  font-family: var(--editorial);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+.method-block__body p + p { margin-top: 1em; }
+
+.security-list {
+  list-style: none;
+  margin-top: var(--s-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.security-list li {
+  position: relative;
+  padding-left: 28px;
+  font-family: var(--editorial);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.security-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ttf-purple);
+}
+
+.fuski-block {
+  background: var(--ttf-ink);
+  color: var(--ttf-white);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+  margin-top: var(--s-5);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--s-5);
+  align-items: center;
+}
+
+.fuski-block__logo img {
+  max-height: 64px;
+  width: auto;
+  filter: invert(1) brightness(2);
+}
+
+.fuski-block__body {
+  font-family: var(--editorial);
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.fuski-block__body a { color: var(--ttf-lavender); text-decoration: underline; }
+
+@media (max-width: 700px) {
+  .fuski-block { grid-template-columns: 1fr; gap: var(--s-3); }
+}
+
+/* -- 22. Reveal on scroll ------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* -- 23. Page header (sub-pages) ------------------------------ */
+
+.page-head {
+  background: var(--ttf-purple);
+  color: var(--ttf-white);
+  padding: var(--s-7) 0 var(--s-5);
+}
+
+.page-head__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.page-head h1 {
+  color: var(--ttf-white);
+  max-width: 18ch;
+  font-size: clamp(40px, 6vw, 80px);
+}
+
+.page-head__deck {
+  margin-top: var(--s-3);
+  font-family: var(--ui);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 60ch;
+}
+
+.page-head__crumb {
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--s-2);
+}
+
+/* -- 24. Placeholder note ------------------------------------- */
+
+.placeholder-note {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--ttf-lavender);
+  color: var(--ttf-deep-purple);
+  border-radius: var(--r-sm);
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* -- 25. Feature row ------------------------------------------ */
+
+.feature-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--s-6);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .feature-row { grid-template-columns: 1fr; gap: var(--s-4); }
+}
+
+/* -- 26. Skip link (a11y) ------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--ttf-ink);
+  color: var(--ttf-white);
+  padding: 12px 18px;
+  z-index: 100;
+  font-family: var(--ui);
+  font-size: 14px;
+}
+
+.skip-link:focus { left: 12px; top: 12px; }
+
+/* -- 27. Utilities -------------------------------------------- */
+
+.t-center { text-align: center; }
+.mt-1 { margin-top: var(--s-1); }
+.mt-2 { margin-top: var(--s-2); }
+.mt-3 { margin-top: var(--s-3); }
+.mt-4 { margin-top: var(--s-4); }
+.mt-5 { margin-top: var(--s-5); }
+.mt-6 { margin-top: var(--s-6); }
+.purple { color: var(--ttf-purple); }
+.deep-purple { color: var(--ttf-deep-purple); }
+.quiet { color: var(--ttf-quiet); }
+
+/* -- 28. Photo placeholders ----------------------------------- */
+
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 280px;
+  background: linear-gradient(135deg, var(--ttf-deep-purple) 0%, var(--ttf-purple) 100%);
+  border-radius: var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 12px,
+    rgba(255,255,255,0.04) 12px,
+    rgba(255,255,255,0.04) 13px
+  );
+}
+
+.photo-placeholder__initials {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 56px;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.9);
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.photo-placeholder__label {
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+  padding: 0 var(--s-2);
+  position: relative;
+  z-index: 1;
+}
+
+.photo-placeholder__desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(62, 17, 107, 0.92);
+  padding: 10px 14px;
+  font-family: var(--ui);
+  font-size: 10px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+}
+
+/* Leader card with photo layout */
+.leader-card--with-photo {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--s-4);
+  align-items: start;
+  background: var(--ttf-soft);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+}
+
+.leader-card--with-photo .leader-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+@media (max-width: 900px) {
+  .leader-card--with-photo {
+    grid-template-columns: 1fr;
+    gap: var(--s-3);
+  }
+  .photo-placeholder {
+    max-width: 160px;
+  }
+}
+
+/* -- 29. Engagement structure block --------------------------- */
+
+.engagement-block {
+  background: var(--ttf-ink);
+  color: var(--ttf-white);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+  margin-top: var(--s-5);
+}
+
+.engagement-block h3 {
+  color: var(--ttf-white);
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.engagement-block .editorial {
+  color: rgba(255,255,255,0.88);
+  font-size: 17px;
+  margin-top: var(--s-3);
+}
+
+/* -- 30. Data security page ----------------------------------- */
+
+.security-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+}
+
+.security-feature {
+  background: var(--ttf-white);
+  border: 1px solid var(--ttf-line);
+  border-radius: var(--r-md);
+  padding: var(--s-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.security-feature__icon {
+  width: 40px;
+  height: 40px;
+  background: var(--ttf-soft);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.security-feature__title {
+  font-family: var(--ui);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ttf-ink);
+  letter-spacing: -0.01em;
+}
+
+.security-feature__body {
+  font-family: var(--ui);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ttf-quiet);
+}
+
+/* -- 31. Full-width bridge section (expanded) ---------------- */
+
+.bridge-section {
+  background: var(--ttf-purple);
+  padding: var(--s-7) 0;
+  text-align: center;
+}
+
+.bridge-section__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.bridge-section__headline {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 52px);
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: var(--ttf-white);
+  line-height: 1.05;
+}
+
+.bridge-section__body {
+  margin-top: var(--s-4);
+  font-family: var(--editorial);
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.6;
+  color: rgba(255,255,255,0.88);
+  font-style: italic;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -- 32. Leader photo (real headshot) ----------------------- */
+
+.leader-photo {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--ttf-soft);
+}
+
+.leader-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  filter: grayscale(15%) contrast(1.04);
+  transition: filter 300ms ease;
+}
+
+.leader-photo img:hover {
+  filter: grayscale(0%) contrast(1);
+}
+
+@media (max-width: 900px) {
+  .leader-photo {
+    max-width: 160px;
+  }
+}
+
+/* -- 33. Editorial photo blocks ------------------------------ */
+
+.editorial-img {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--r-lg);
+}
+
+.editorial-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.editorial-img__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--s-3) var(--s-4);
+  background: linear-gradient(to top, rgba(62,17,107,0.82) 0%, transparent 100%);
+  font-family: var(--ui);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.88);
+}
+
+.editorial-img--wide {
+  height: 300px;
+  border-radius: 0;
+}
+
+.editorial-img--medium {
+  height: 280px;
+}
+
+.editorial-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+}
+
+@media (max-width: 800px) {
+  .editorial-img { height: 220px; }
+  .editorial-img--wide { height: 200px; }
+  .editorial-img--medium { height: 200px; }
+  .editorial-pair { grid-template-columns: 1fr; }
+}
+
+</style>
+  <link rel="icon" href="https://ik.imagekit.io/ztdjsu12hs/TTF/ttf-logo-purple-final.png" type="image/png">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="The Tenth Floor — home">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/ttf-logo-purple-final.png" alt="The Tenth Floor">
+    </a>
+    <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links">
+      <li><a href="method.html">Method</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="who-we-work-with.html">Who we work with</a></li>
+      <li><a href="data-security.html">Data Security</a></li>
+      <li><span style="color:var(--ttf-quiet);font-weight:500;font-size:15px;letter-spacing:-0.005em;opacity:0.5;cursor:default;user-select:none;">Opinions</span></li>
+    </ul>
+    <a href="https://calendar.app.google/p3SDpqn5yT21yfkJ6" target="_blank" rel="noopener" class="btn btn--primary nav__cta">Let&#39;s talk <span class="arrow">&rarr;</span></a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ===== Hero ============================================= -->
+<header class="hero">
+  <div class="hero__inner">
+    <h1 class="display-xl reveal">When the Playbook Stops Paying Back</h1>
+    <p class="hero__deck reveal">Something changed in the relationship between experience and outcomes. What made accumulated judgment reliable no longer works the way it did, and the change is structural, not cyclical.</p>
+    <div class="hero__cta reveal">
+      <a href="https://calendar.app.google/p3SDpqn5yT21yfkJ6" target="_blank" rel="noopener" class="btn btn--white btn--lg">Let&#39;s talk <span class="arrow">&rarr;</span></a>
+      <a href="#problem" class="btn btn--ghost btn--lg" style="color:#fff;border-color:rgba(255,255,255,.5)">Read the argument</a>
+    </div>
+    <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/ttf_2018_new_logo_rev.png" alt="" class="hero__mark" aria-hidden="true">
+  </div>
+</header>
+
+<!-- ===== Problem (Page 1) ================================= -->
+<section class="section" id="problem">
+  <div class="wrap">
+    <div class="lede reveal">
+      <div class="eyebrow">The argument &middot; Page 1</div>
+      <h2 class="display-md mt-2">Experience is intact. The environment it was calibrated for has moved.</h2>
+    </div>
+    <div class="editorial mt-5 reveal" style="max-width:760px">
+      <p>Every business strategy is built on a set of assumptions. In stable conditions, those assumptions compound. The decision that worked last year tends to work this year. Instincts refined over a decade become the shortcut that makes good judgment feel automatic.</p>
+      <p>That is how careers get built. It is also why the current moment is genuinely unusual.</p>
+      <p>The conditions under which most senior strategies were formed have shifted, not gradually, in the way that allows for adjustment, but sharply, in a way that leaves previously reliable rules producing the wrong answer to the right question.</p>
+      <p>The rules still work. But the world they were written for has shifted.</p>
+      <p>Here is the distinction that matters. A capability problem asks whether a leader or organisation has what it takes. A method problem asks whether the right approach is being applied to a changed environment. Treating them as the same problem is where expensive mistakes begin. A capability problem is solved by working harder or hiring differently. A method problem requires thinking differently: building a way of working that produces clarity even when the inherited rules have stopped producing it.</p>
+      <p><strong>That is what The Tenth Floor was built to provide.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Two Disruptions (Page 2) ======================== -->
+<section class="section section--lavender" id="disruptions">
+  <div class="wrap">
+    <div class="lede reveal">
+      <div class="eyebrow">The argument &middot; Page 2</div>
+      <h2 class="display-lg mt-2">Two Disruptions. One Decade. Neither Is Over.</h2>
+      <p class="deck">Markets became unpredictable in new ways. Technology commoditised the output organisations built their strategies around. Together, these forces changed what business leadership demands.</p>
+    </div>
+
+    <div class="editorial mt-5 reveal" style="max-width:760px">
+      <p>Start with the market layer. Policy shifts, geopolitical realignments, and supply disruptions that were once exceptional have become, by most measures, routine. The trade architecture governing commercial assumptions for two decades was altered within a single news cycle. Commodity prices, regulatory frameworks, and economic projections now move at a speed that makes quarterly planning look like long-range forecasting. Organisations still operating from assumptions that held a year ago are not operating from bad intelligence. They are operating from outdated intelligence, which is a different problem with a different solution.</p>
+      <p>The second disruption is technological. Its consequences are subtler, and in some ways more important. The widespread availability of AI tools means the traditional outputs of professional knowledge work (documents, analyses, models, recommendations) can now be produced at scale, at speed, and at a fraction of their former cost. This is frequently treated as a productivity story. It is more accurately a value story. When output is abundant, output stops being the differentiator. The scarce thing, the thing that now determines competitive position, is the judgment behind the output.</p>
+    </div>
+
+    <div class="stat-grid reveal">
+      <div class="stat">
+        <div class="stat__value">92%</div>
+        <div class="stat__label">of S&amp;P 500 market value is now intangible. In 1975, that figure was 17%. Source: Ocean Tomo Intangible Asset Market Value Study.</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">80%</div>
+        <div class="stat__label">of global AI investment did not deliver the expected business results, per BCG. The successful 20% invested in human judgment alongside the tools.</div>
+      </div>
+    </div>
+
+    <div class="editorial mt-5 reveal" style="max-width:760px">
+      <p>The question is not how to acquire more tools, or more data, or more capability. It is how to build the judgment that makes all three productive, and that holds its value when conditions keep shifting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Investigating vs Guessing (Page 3) ============== -->
+<section class="section" id="investigating">
+  <div class="wrap">
+    <div class="lede reveal">
+      <div class="eyebrow">The argument &middot; Page 3</div>
+      <h2 class="display-lg mt-2">The Difference Between Investigating and Guessing</h2>
+      <p class="deck">Most strategic errors do not begin with bad data or wrong instincts. They begin with the right answer applied to the wrong question. There is a method for finding the right question. Most organisations have never built it.</p>
+    </div>
+
+    <div class="editorial mt-5 reveal" style="max-width:760px">
+      <p>Strategic errors compound in a revealing way. Most do not begin with bad data or wrong instincts. They begin with the right answer applied to the wrong question.</p>
+      <p>Organisations accumulate rules (frameworks, models, decision criteria) that worked reliably under previous conditions. When a new problem arrives, the rule fires and produces an answer. The answer may be internally consistent with everything the organisation has previously learned. But if the conditions that made the rule reliable have shifted, the answer is wrong in a way that is hard to detect from inside the system that produced it. The rule looks like it should work. It no longer does.</p>
+      <p>Call this the fixed-rule approach. Its limitation is not incompetence or inattention. It is that the approach was built for a more stable world, and it does not update itself.</p>
+      <p>The investigative approach is structurally different. It begins not with an answer but with a hypothesis (an informed view of what the evidence is likely to show) and tests that hypothesis against whatever data exists. The data does not need to be clean or complete; most valuable evidence is neither. In most real-world conditions, waiting for perfect data means never deciding, with little or no action.</p>
+    </div>
+    </div>
+    <div class="wrap" style="margin-top:var(--s-4)">
+      <div class="editorial-img editorial-img--wide reveal">
+        <img src="assets/img/editorial_corp04_hk_intel_strip.jpg" alt="The Tenth Floor leadership programme — Hong Kong" loading="lazy">
+        <div class="editorial-img__caption">Hyper Island &middot; Jardines &middot; KFC &middot; Intel &middot; IMDA &mdash; Hong Kong &amp; Singapore</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Bridge — expanded standalone section ============ -->
+<section class="bridge-section">
+  <div class="bridge-section__inner">
+    <div class="bridge-section__headline reveal">The Investigative Approach Is Not a Philosophy. It Is a Structured Method.</div>
+    <p class="bridge-section__body reveal">That method is what The Tenth Floor calls the Data Detective. It was not assembled from a consulting textbook, but was built inside the conditions that organisations are currently being asked to navigate.</p>
+  </div>
+</section>
+
+<!-- ===== Built Inside Disruption (Page 4) ================ -->
+<section class="beat">
+  <div class="beat__inner">
+    <div class="beat__head reveal">
+      <div class="eyebrow">The argument &middot; Page 4</div>
+      <h2 class="display-lg mt-2">Built Inside Disruption. Not Adapted to It.</h2>
+      <p class="deck">There is a meaningful difference between a firm that adapted its positioning when disruption became fashionable and one that was operating inside the disruption from the beginning. The Tenth Floor is the latter.</p>
+    </div>
+    <div class="beat__body reveal">
+      <div class="editorial">
+        <p>The Tenth Floor was founded in 2015, at the start of a rapid sequence of structural commercial disruptions. That decade was the working environment, not the backdrop.</p>
+        <p>Digital transformation. Global trade fragmentation. Pandemic-forced commercial rebuilds. The end of cheap capital. The first waves of AI operating at the judgment layer. Each disruption invalidated a different set of assumptions. Each produced the same lesson: the organisations that built evidence-based decision-making through the disruption, rather than waiting for stability to return, outperformed those that waited.</p>
+      </div>
+      <div class="beat__stat">
+        <div class="stat">
+          <div class="stat__value">5,000</div>
+          <div class="stat__label">companies studied by McKinsey across three decades. Those that invested in capability during downturns outperformed those that waited, and the gap widened over the following five years.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Method preview (5 principles) =================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="lede reveal">
+      <div class="eyebrow">Method</div>
+      <h2 class="display-md mt-2">The Data Detective method operates on five principles.</h2>
+      <p class="deck mt-3">The method was refined across ten years of that work. It is not a framework picked off a shelf. It is what The Tenth Floor is.</p>
+    </div>
+
+    <div class="principles reveal">
+      <div class="principle">
+        <div class="principle__num">01</div>
+        <div class="principle__title">Investigate before concluding.</div>
+        <div class="principle__body">Every engagement begins from the evidence, not from a pre-formed view of what the answer should be. No off-the-shelf frameworks. No prior industry conclusions assumed to apply.</div>
+      </div>
+      <div class="principle">
+        <div class="principle__num">02</div>
+        <div class="principle__title">Work with what exists.</div>
+        <div class="principle__body">The data does not need to be clean before the work begins. Most organisations hold significant evidence they have never properly interrogated. The value is in the investigation, not in waiting for perfect conditions.</div>
+      </div>
+      <div class="principle">
+        <div class="principle__num">03</div>
+        <div class="principle__title">Find patterns that explain, not just describe.</div>
+        <div class="principle__body">A pattern that describes what happened is a useful record. A pattern that explains why it happened is actionable. The difference determines whether a finding produces a decision or a discussion.</div>
+      </div>
+      <div class="principle">
+        <div class="principle__num">04</div>
+        <div class="principle__title">Deliver an answer, not a report.</div>
+        <div class="principle__body">The output of every engagement is a specific, evidence-backed response to the question being resolved, fast enough to act on, and connected directly to the decision at hand.</div>
+      </div>
+      <div class="principle">
+        <div class="principle__num">05</div>
+        <div class="principle__title">Leave the method behind.</div>
+        <div class="principle__body">The measure of a good engagement is that the next question can be answered without us. At the end of every engagement, the team that worked with The Tenth Floor can apply the same approach independently. Consulting spend that accumulates without transferring capability is spend that has to be repeated. Method that transfers compounds.</div>
+      </div>
+    </div>
+    <div class="mt-5 t-center">
+      <a href="method.html" class="btn btn--ghost">Read the full method <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Selected work =================================== -->
+<section class="section section--soft">
+  <div class="wrap">
+    <div class="lede reveal">
+      <div class="eyebrow">Selected work</div>
+      <h2 class="display-md mt-2">The answer was always in the evidence.</h2>
+      <p class="deck">Twelve engagements. Four continents. Multiple industries. In every case, the answer was not in the obvious place. It was in the evidence no one had thought to examine.</p>
+    </div>
+
+    <div class="cases reveal">
+      <a href="work.html#mastercard" class="case-card">
+        <div class="case-card__logo"><img src="https://ik.imagekit.io/ztdjsu12hs/TTF/mastercard.png" alt="Mastercard"></div>
+        <div class="case-card__meta">Financial Services / Singapore</div>
+        <div class="case-card__title">The insight was in public data the whole time.</div>
+        <div class="case-card__outcome">Five-year exclusive partnership with SMRT. <strong>Cross-border transaction volume up materially.</strong> Covered by Bloomberg.</div>
+      </a>
+      <a href="work.html#hilton" class="case-card">
+        <div class="case-card__logo"><img src="https://ik.imagekit.io/ztdjsu12hs/TTF/hilton.png" alt="Hilton"></div>
+        <div class="case-card__meta">Hospitality / Australia &amp; Japan</div>
+        <div class="case-card__title">When the market resets, don&rsquo;t reduce price. Re-read the market.</div>
+        <div class="case-card__outcome"><strong>Bookings up 17%.</strong> No advertising spend. No price reductions. Premium positioning held throughout.</div>
+      </a>
+      <a href="work.html#frasers" class="case-card">
+        <div class="case-card__logo"><img src="https://ik.imagekit.io/ztdjsu12hs/TTF/Frasers.png" alt="Frasers Property"></div>
+        <div class="case-card__meta">Retail / Singapore</div>
+        <div class="case-card__title">Measurement strategy must precede analysis.</div>
+        <div class="case-card__outcome"><strong>Footfall up 150%.</strong> Operating model shifted from intuition-based tenancy management to evidence-based optimisation.</div>
+      </a>
+    </div>
+    <div class="mt-5 t-center">
+      <a href="work.html" class="btn btn--ghost">More cases <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Client strip ===================================== -->
+<section class="strip" aria-label="Selected clients">
+  <div class="strip__inner">
+    <div class="strip__label eyebrow reveal">Trusted by</div>
+    <div class="strip__grid reveal">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/ocbc.png" alt="OCBC">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/mastercard.png" alt="Mastercard">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/nestle.png" alt="Nestle">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/hilton.png" alt="Hilton">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/Frasers.png" alt="Frasers Property">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/great%20eastern.png" alt="Great Eastern">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/axiata.png" alt="XL Axiata">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/ASBL.jpg" alt="ASBL" class="is-asbl">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/hsbc.png" alt="HSBC">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/pfizer.png" alt="Pfizer / Haleon">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/singapore_zoo.png" alt="Singapore Zoo">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/standard_chartered.png" alt="Standard Chartered">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/unilever.png" alt="Unilever">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/intel.png" alt="Intel">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/bnp_paribas.png" alt="BNP Paribas">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/kimberly_clark.png" alt="Kimberly-Clark">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/grab.png" alt="Grab">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/temasek.png" alt="Temasek">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/bayer.png" alt="Bayer">
+      <img src="https://ik.imagekit.io/ztdjsu12hs/TTF/national_gallery_singapore.png" alt="National Gallery Singapore">
+    </div>
+  </div>
+</section>
+
+<!-- ===== Personas teaser ================================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="lede reveal">
+      <div class="eyebrow">Who we work with</div>
+      <h2 class="display-md mt-2">Different situations. One starting point.</h2>
+      <p class="deck">The leaders who come to The Tenth Floor are not uniform in their circumstances. The method that produces clarity is.</p>
+    </div>
+    <div class="editorial mt-4 reveal" style="max-width:760px">
+      <p>In every case, the question is not whether the capability exists. It does. The question is whether there is a method that makes that capability produce clear, defensible outcomes in an environment that has changed around it.</p>
+    </div>
+
+    <div class="personas reveal">
+      <a href="who-we-work-with.html#legacy-leader" class="persona" style="text-decoration:none;color:inherit">
+        <div class="persona__num">01</div>
+        <div class="persona__name">The Legacy Leader</div>
+        <div class="persona__body">Has inherited structures built on assumptions that no longer hold, and is working out what still has commercial value.</div>
+      </a>
+      <a href="who-we-work-with.html#high-performer" class="persona" style="text-decoration:none;color:inherit">
+        <div class="persona__num">02</div>
+        <div class="persona__name">The High Performer</div>
+        <div class="persona__body">Carries a strong track record that is becoming invisible to the people controlling budget.</div>
+      </a>
+      <a href="who-we-work-with.html#operating-leader" class="persona" style="text-decoration:none;color:inherit">
+        <div class="persona__num">03</div>
+        <div class="persona__name">The Operating Leader</div>
+        <div class="persona__body">Has been handed a technology mandate without the roadmap, team capability, or evidence base to execute it credibly.</div>
+      </a>
+      <a href="who-we-work-with.html#practitioner" class="persona" style="text-decoration:none;color:inherit">
+        <div class="persona__num">04</div>
+        <div class="persona__name">The Practitioner</div>
+        <div class="persona__body">Has built a career on a specific domain expertise and is watching tools imitate enough of it to attract investment attention.</div>
+      </a>
+      <a href="who-we-work-with.html#functional-leader" class="persona" style="text-decoration:none;color:inherit">
+        <div class="persona__num">05</div>
+        <div class="persona__name">The Functional Leader</div>
+        <div class="persona__body">Owns a function whose methodology was never made legible to those who measure its results.</div>
+      </a>
+    </div>
+    <div class="mt-5 t-center">
+      <a href="who-we-work-with.html" class="btn btn--ghost">Find your situation <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Two leaders ====================================== -->
+<section class="section section--soft">
+  <div class="wrap">
+    <div class="lede reveal">
+      <div class="eyebrow">The leadership team</div>
+      <h2 class="display-md mt-2">The people present on the first day are the people present on the last.</h2>
+    </div>
+    <div class="editorial mt-4 reveal" style="max-width:760px">
+      <p>Most consulting engagements begin with senior partners and end with junior teams. The Tenth Floor is structured differently. Two senior leaders run every engagement, present in every meeting, every decision, every deliverable, from first conversation to final day. The thinking does not change hands. The relationship does not change hands. The client works with the people doing the work.</p>
+    </div>
+
+    <div class="leaders reveal" style="display:flex;flex-direction:column;gap:var(--s-4)">
+
+      <div class="leader-card--with-photo">
+        <div class="leader-photo">
+          <img src="assets/img/subhendu_headshot.jpg" alt="Subhendu Mukherjee" loading="lazy">
+        </div>
+        <div class="leader-card__content">
+          <div class="leader-card__name">Subhendu Mukherjee</div>
+          <div class="leader-card__role">Founder &amp; Director</div>
+          <p class="leader-card__bio">Twenty-five years in global marketing strategy. Former Managing Director of JWT Malaysia. Former Head of Integrated Strategy at McCann Singapore.</p>
+          <p class="leader-card__bio">The decade of work that produced the Data Detective method was built under Subhendu&rsquo;s direction. Every major disruption since 2015 has been a live engagement context, not a case study from a safer era.</p>
+          <div class="leader-card__credentials">
+            <span class="credential">Cannes Lions Grand Prix</span>
+            <span class="credential">Gold, Data-Driven Marketing</span>
+            <span class="credential">Hyper Island</span>
+            <span class="credential">Google Squared</span>
+            <span class="credential">NTU Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="leader-card--with-photo">
+        <div class="leader-photo">
+          <img src="assets/img/hasnah_headshot.jpg" alt="Hasnah Mohamed Samidin" loading="lazy">
+        </div>
+        <div class="leader-card__content">
+          <div class="leader-card__name">Hasnah Mohamed Samidin</div>
+          <div class="leader-card__role">Analyst &amp; Director</div>
+          <p class="leader-card__bio">Brand strategist with sustained experience across SEA and MENA markets. Career spanning Executive Creative Director, Head of Strategy, and analytical lead inside the investigative work.</p>
+          <p class="leader-card__bio">Hasnah brings the analytical and strategic depth that translates evidence into decisions that hold under commercial pressure.</p>
+          <div class="leader-card__credentials">
+            <span class="credential">Cannes Lions Grand Prix</span>
+            <span class="credential">Clio</span>
+            <span class="credential">The One Show</span>
+            <span class="credential">New York Festivals</span>
+            <span class="credential">Effie</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="mt-5 t-center">
+      <a href="https://calendar.app.google/p3SDpqn5yT21yfkJ6" target="_blank" rel="noopener" class="btn btn--ghost">Let&#39;s talk with the team <span class="arrow">&rarr;</span></a>
+    </div>
+
+    <div style="border-top:1px solid var(--ttf-line);margin-top:var(--s-6);"></div>
+    <div class="lede reveal" style="margin-top:var(--s-5);">
+      <h2 class="display-sm">Consulting Advisors</h2>
+    </div>
+    <div style="margin-top:var(--s-5);display:flex;flex-direction:column;gap:var(--s-4);max-width:760px;">
+
+      <div class="leader-card--with-photo reveal">
+        <div class="leader-photo">
+          <img src="assets/img/Taru_Image_BW.png" alt="Taru Jain" loading="lazy">
+        </div>
+        <div class="leader-card__content">
+          <div class="leader-card__name">Taru Jain</div>
+          <div class="leader-card__role">Consulting Advisor &middot; Singapore</div>
+          <p class="leader-card__bio">28 years across marketing strategy and digital transformation &mdash; WPP, Publicis, and Interpublic; then FutureMarketer (successful exit) and Maxential, which has trained 15,000+ executives at 80+ organisations across 45 countries. Adjunct Faculty at SMU, Rutgers, and Duke Corporate Education. Angel investor in Web3, analytics, and marketing technology.</p>
+          <div class="leader-card__credentials">
+            <span class="credential">SMU</span>
+            <span class="credential">Rutgers University</span>
+            <span class="credential">Duke Corporate Education</span>
+            <span class="credential">Maxential</span>
+            <span class="credential">Web3</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="border-top:1px solid var(--ttf-line);margin-top:var(--s-6);"></div>
+
+  </div>
+</section>
+
+<!-- ===== How Engagements Are Structured ================== -->
+<section class="section section--lavender" id="engagements">
+  <div class="wrap">
+    <div class="lede reveal">
+      <div class="eyebrow">How engagements are structured</div>
+      <h2 class="display-md mt-2">Fixed scope. Fixed fee. Everything transfers.</h2>
+    </div>
+    <div class="editorial mt-4 reveal" style="max-width:760px">
+      <p>Every engagement is fixed scope and fixed fee. No dependency created by design. The engagement is built from the beginning so that it ends. Everything produced (the findings, the dashboards, the method, the measurement instrument) belongs to the client&rsquo;s team from the moment the work concludes. We are here until you don&rsquo;t need us, and that is deliberately how we build the work.</p>
+      <p>The most reliable test of a method is not its theoretical coherence. It is what happens when it is applied to real problems, in real conditions, with real commercial consequences on the other side. Across twelve engagements, four continents, and a decade of disruption, that test has been run consistently.</p>
+    </div>
+    <div class="mt-5 reveal">
+      <a href="https://calendar.app.google/p3SDpqn5yT21yfkJ6" target="_blank" rel="noopener" class="btn btn--primary">Let&#39;s talk <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Three options ==================================== -->
+<section class="section" id="three-options">
+  <div class="wrap">
+    <div class="lede reveal">
+      <div class="eyebrow">Three ways to begin</div>
+      <h2 class="display-lg mt-2">The first step is always a conversation.</h2>
+      <p class="deck">Not a pitch. Not a proposal. A direct meeting with the leadership team about the real question underneath the stated problem.</p>
+    </div>
+
+    <div class="options reveal">
+      <div class="option option--featured">
+        <div class="option__label">Option A &middot; Most begin here</div>
+        <div class="option__title">A structured conversation</div>
+        <div class="option__body">A direct meeting with The Tenth Floor leadership. No pitch. No proposal. Within 24 hours, a one-page written summary of what was heard is delivered. That document belongs entirely to the organisation, regardless of what comes next.</div>
+        <div class="option__cta"><a href="https://calendar.app.google/p3SDpqn5yT21yfkJ6" target="_blank" rel="noopener" class="btn btn--white">Let&#39;s talk <span class="arrow">&rarr;</span></a></div>
+      </div>
+      <div class="option">
+        <div class="option__label">Option B</div>
+        <div class="option__title">A diagnostic sprint</div>
+        <div class="option__body">A short, fixed-scope, fixed-fee investigation. One actionable, evidence-backed finding, built from the data and signals that already exist. Delivered in a few weeks. Fully the client&rsquo;s to act on, own, and build from.</div>
+        <div class="option__cta"><a href="https://calendar.app.google/p3SDpqn5yT21yfkJ6" target="_blank" rel="noopener" class="btn btn--ghost">Let&#39;s talk <span class="arrow">&rarr;</span></a></div>
+      </div>
+      <div class="option">
+        <div class="option__label">Option C</div>
+        <div class="option__title">A full engagement</div>
+        <div class="option__body">A consulting or people-development engagement with defined scope, fixed fee, and clear deliverables. Ends with a working method transferred to the client&rsquo;s team. The capability stays. The reliance does not need to continue.</div>
+        <div class="option__cta"><a href="https://calendar.app.google/p3SDpqn5yT21yfkJ6" target="_blank" rel="noopener" class="btn btn--ghost">Let&#39;s talk <span class="arrow">&rarr;</span></a></div>
+      </div>
+    </div>
+
+    <p class="bridge mt-6 reveal">Fixed scope. Fixed fee. No dependency created. No lock-in. Every output belongs entirely to the organisation when the work concludes.</p>
+  </div>
+</section>
+
+<!-- ===== Contact ========================================== -->
+<section class="contact-block" id="contact">
+  <div class="contact-block__inner">
+    <div class="reveal">
+      <div class="eyebrow" style="color:rgba(255,255,255,.7)">Direct line</div>
+      <h2 class="display-lg mt-2">The Leadership Team Is Taking Meetings</h2>
+      <p class="contact-block__deck">No pitch. No proposal. A conversation about the real question underneath the problem.</p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <div>
+        <div class="contact-card__name">Hasnah Mohamed Samidin</div>
+        <div class="contact-card__role">Analyst &amp; Director</div>
+      </div>
+      <div>
+        <div class="contact-card__name">Subhendu Mukherjee</div>
+        <div class="contact-card__role">Founder &amp; Director</div>
+      </div>
+    </div>
+
+    <div class="contact-block__address reveal">
+      thetenthfloor.com &nbsp;&middot;&nbsp; 36 Robinson Road, #20-01, City House, Singapore 068877
+    </div>
+    <p class="contact-block__sign-off reveal"><em>A specific, defensible answer to the question that is actually worth asking, and the method to keep producing those answers confidently, independently.</em></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__pvm">
+      <div>
+        <div class="footer__block-label">Purpose</div>
+        <div class="footer__block-body">To champion human judgment, and to position organisations and the domain leaders within them to lead with conviction as technology advances.</div>
+      </div>
+      <div>
+        <div class="footer__block-label">Promise</div>
+        <div class="footer__block-body">Evidence-backed clarity on what leaders and organisations need to do next, and the conviction to act on it.</div>
+      </div>
+      <div>
+        <div class="footer__block-label">Vision</div>
+        <div class="footer__block-body">To be the definitive firm that domain leaders turn to when they need to claim and hold their competitive advantage as technology reshapes every industry.</div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>&copy; The Tenth Floor. All rights reserved.</div>
+      <div class="footer__sign-off">Clarity when it matters most.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* The Tenth Floor — Site JS. Vanilla, no dependencies. */
+
+(function () {
+  'use strict';
+
+  // 1. Mobile nav toggle
+  var hamburger = document.querySelector('.nav__hamburger');
+  var navLinks = document.querySelector('.nav__links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('is-open');
+      navLinks.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', String(hamburger.classList.contains('is-open')));
+    });
+    navLinks.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        hamburger.classList.remove('is-open');
+        navLinks.classList.remove('is-open');
+      });
+    });
+  }
+
+  // 2. Scroll reveal
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && reveals.length > 0) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  // 3. Case filters (work page)
+  var filtersRoot = document.querySelector('[data-filters]');
+  if (filtersRoot) {
+    var cases = document.querySelectorAll('[data-case]');
+    var state = { industry: 'all', region: 'all' };
+
+    function applyFilters() {
+      cases.forEach(function (c) {
+        var ind = c.getAttribute('data-industry') || '';
+        var reg = c.getAttribute('data-region') || '';
+        var indMatch = state.industry === 'all' || ind.split(' ').indexOf(state.industry) !== -1;
+        var regMatch = state.region === 'all' || reg.split(' ').indexOf(state.region) !== -1;
+        c.style.display = (indMatch && regMatch) ? '' : 'none';
+      });
+    }
+
+    filtersRoot.querySelectorAll('.filter-chip').forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var group = chip.getAttribute('data-group');
+        var value = chip.getAttribute('data-value');
+        if (!group || !value) return;
+        state[group] = value;
+        filtersRoot.querySelectorAll('.filter-chip[data-group="' + group + '"]').forEach(function (c) {
+          c.classList.remove('is-active');
+        });
+        chip.classList.add('is-active');
+        applyFilters();
+      });
+    });
+  }
+
+  // 4. Smooth anchor scroll
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    var target = link.getAttribute('href');
+    if (target === '#' || target === '#!') return;
+    link.addEventListener('click', function (e) {
+      var el = document.querySelector(target);
+      if (!el) return;
+      e.preventDefault();
+      var top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+  // 5. Active nav state
+  var path = window.location.pathname;
+  document.querySelectorAll('.nav__links a').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (!href || href.indexOf('http') === 0) return;
+    var base = href.split('#')[0];
+    if (base && (path === '/' + base || path.endsWith('/' + base) || path.endsWith(base))) {
+      a.classList.add('is-active');
+    }
+  });
+})();
+
+</script>
+</body>
+</html>

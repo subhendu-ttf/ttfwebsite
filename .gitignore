@@ -1,0 +1,43 @@
+# ============================================================
+# The Tenth Floor — .gitignore
+# ============================================================
+
+# -- macOS --
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+__MACOSX/
+
+# -- Windows --
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# -- Editors --
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -- Build artefacts --
+*.zip
+*.tar.gz
+dist/
+build/
+
+# -- Environment & secrets (future-proofing) --
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets.json
+config.local.js
+
+# -- Node (if a build step is ever added) --
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
