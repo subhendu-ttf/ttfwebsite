@@ -1,0 +1,12 @@
+# Redirects from the previous Next.js site (Netlify-hosted) to the new static site.
+# Format: <from>  <to>  <status>
+# 301 = permanent redirect (preserves SEO equity, browsers cache).
+
+/About              /  301
+/About/*            /  301
+/Company            /  301
+/Company/*          /  301
+/DataTraining       /  301
+/DataTraining/*     /  301
+/privacy-policy     /  301
+/privacy-policy/*   /  301
