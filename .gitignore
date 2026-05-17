@@ -2,6 +2,9 @@
 # The Tenth Floor — .gitignore
 # ============================================================
 
+# -- Local operational notes (contains email / infra details) --
+SETUP-LOG.md
+
 # -- macOS --
 .DS_Store
 .DS_Store?
